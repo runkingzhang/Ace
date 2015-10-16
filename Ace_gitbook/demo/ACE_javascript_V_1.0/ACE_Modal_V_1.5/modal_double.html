@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta charset="utf-8">
+<title>Modal-demo</title>
+<meta name="description" content="">
+<meta name="keyword" content="">
+<link  href="css/puerh.css"  type="text/css"  rel="stylesheet">
+</head>
+
+<body class="lay-body modal-open">
+
+<a  data-toggle="modal"  data-target="#myModal" >Modal Demo</a>
+ 
+<div id="myModal" class="modal fade hide in" data-backdrop="static" style ="width:400px; height:400px;">
+ <h4 class="modal-title">本操作</h4>
+ <a href="###" data-dismiss="modal" class="close">×</a>
+ <div class="modal-content">
+ 	myModal
+ 	<br>
+   <a  data-toggle="modal"  data-target="#myModal2"  >Modal Demo  2</a>
+
+ </div>
+</div>
+
+<div id="myModal2" class="modal fade hide in" data-backdrop="static" style ="width:200px; height:200px;">
+ <h4 class="modal-title">本操作</h4>>
+ <h4 class="modal-title">本操作</h4>
+ <a href="###" data-dismiss="modal" class="close">×</a>
+ <div class="modal-content">
+  myModal2
+ </div>
+</div>
+
+
+
+
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/modal.js"></script>
+
+</body>
+</html>

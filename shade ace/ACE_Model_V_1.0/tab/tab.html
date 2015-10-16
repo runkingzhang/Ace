@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta charset="utf-8">
+<title>mod-modal使用html data触发</title>
+<meta name="description" content="">
+<meta name="keyword" content="">
+    <link  href="css/layout.css"  type="text/css"  rel="stylesheet">
+<link  href="css/mod-tab.css"  type="text/css"  rel="stylesheet">
+</head>
+
+<body class="lay-body">
+<div class="tab sep">
+    <ul class="tab-title clearfix">
+        <li class="tab-title-item"><a data-toggle="tab" href="#tab-1">全部</a>
+        </li>
+        <li class="tab-title-item"><a data-toggle="tab" href="#tab-2">个人</a>
+        </li>
+        <li class="tab-title-item active"><a data-toggle="tab" href="#tab-3">商家</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div id="tab-1" class="tab-content-pane">#tab-1</div>
+        <div id="tab-2" class="tab-content-pane">#tab-2</div>
+        <div id="tab-3" class="tab-content-pane active">#tab-3</div>
+    </div>
+</div>
+
+
+
+<!---->
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/tab.js"></script>
+<script>
+
+$(function(){
+  console.log("ssssssssssssssssss");
+  $("#tijiao").click(function(){
+    
+    console.log($("#test").attr("value"));
+
+  });
+  
+})
+</script>
+</body>
+</html>

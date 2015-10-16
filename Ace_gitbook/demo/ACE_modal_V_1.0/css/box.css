@@ -1,0 +1,19 @@
+.lay-container{width:500px;margin:20px auto ;}
+/*下面是box原型的css*/
+.mod-box{border:1px solid #ccc;zoom:1;font-size:12px;margin:0;padding:0;border-bottom:0;}
+.mod-box-head{border-bottom:1px solid #ccc;position:relative;
+    padding:10px;line-height:16px;
+ zoom:1;}
+.mod-box-head:after{content:"."; display:block; height:0; visibility:hidden; clear:both; }
+.mod-box-head-title{color:#656565;font-size:14px;font-weight:700;float:left;display:inline;margin:0;padding:0}
+.mod-box-head-more{float:right}
+.mod-box-head-text{margin-left:10px;color:gray;float:left}
+.mod-box-container{background:#fff;border-bottom:1px solid #ccc}
+.mod-box-content{padding:10px}
+/*下面是box实例的css*/
+.new-mod-box-hidden{margin: 15px 0 0 0;}
+.new-mod-box-hidden .mod-box-container{display: none;}
+.new-mod-box-margin{margin: 30px 0 0 0;}
+.new-mod-box-follow{border-top:0}
+
+

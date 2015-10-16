@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta charset="utf-8">
+<title>list-demo</title>
+<meta name="description" content="">
+<meta name="keyword" content="">
+<link  href="css/layout.css"  type="text/css"  rel="stylesheet">
+<style>
+.lay-body{ width: 150px; height: auto;; margin: 0 auto;}
+/* con-list
+ * author: zhangrunke@myhexin.com
+ */
+.com-list{border:1px solid #f3f2f1;border-top:none;background:#fff;color:#333;}
+.com-list-item{position:relative;display:inline-block;_display:inline;width:100%;}
+.com-list-item a{display:block;padding:10px 15px;*zoom:1;border-top:1px solid #f3f2f1;color:#333;line-height:1.1;}
+.com-list-item a:hover, .com-list .active a{background:#ec5524;text-decoration:none;color:#fff;}
+.com-list-item a:hover{background:#ff7744;}
+.com-list-item-badge {display:inline-block;color:#fff;position:absolute;right:15px;top:11px;line-height:16px;height:16px;background:#ec5524;border-radius:8px;padding:0 6px;font-size:12px;pointer-events:none;}
+.com-list-item:hover .com-list-item-badge, .com-list .active .com-list-item-badge{background:#fff;color:#ec5524;}
+
+/* con-list
+ * author: zhangrunke@myhexin.com
+ * 样式内容应该是在最基础的css上做相关的修改，这边不一定是要加上对应的new这种方式来修改，站点中第一个样式应该是多为一个modal，类库只是提供一种相近内容的展示。
+ */
+
+
+.ui-list {
+    margin: 0;
+    padding: 10px;
+    list-style: square inside;
+}
+/* 默认有方角 */
+.ui-list-item {
+    font-size: 9px;
+    line-height: 20px;
+}
+.ui-list-item a {
+    line-height: 20px;
+    text-decoration: none;
+    color: #08c;    
+}
+
+.ui-list-item a,
+.ui-list-item span.ui-list-item-text {
+    font-size: 12px;
+    vertical-align: middle;    
+}
+
+.ui-list-item a:hover {
+    text-decoration: underline;    
+}
+
+/* 灰色小方角 */
+.ui-list-gray .ui-list-item {
+    color: #808080;
+}
+
+/* 灰色小方角＋灰色链接 */
+.ui-list-graylink .ui-list-item {
+    color: #808080;    
+}
+
+.ui-list-graylink .ui-list-item a {
+    color: #666;
+}
+
+/* 没有小图标的 */
+.ui-list-nosquare {
+    list-style: none;    
+}
+
+/* ui-dlist */
+
+.ui-dlist {
+    display: inline-block;
+    color: #808080;
+    font-size: 12px;
+    line-height: 2.2;
+}
+
+.ui-dlist-tit {
+    float: left;
+    width: 20%;/* 默认值, 具体根据视觉可改 */
+    text-align: right;
+    margin: 0;
+}
+.ui-dlist-det {
+    float: left;
+    width: 80%;/* 默认值，具体根据视觉可改 */
+    text-align: left;
+    margin: 0;
+}
+</style>
+</head>
+
+<body class="lay-body ">
+<h3>list-tab</h3>
+<ul class="com-list">
+ <li class="com-list-item">
+  <a href="#">Item 1</a>
+  <cite class="com-list-item-badge">12</cite>
+ </li>
+ <li class="com-list-item">
+  <a href="#">Item 1</a>
+  
+ </li>
+ <li class="com-list-item">
+  <a href="#">Item 1</a>
+  
+ </li>
+
+ <li class="com-list-item active">
+  <a href="###">Item 2</a>
+ </li>
+</ul>
+
+
+<h3>内容list</h3>
+<ul class="ui-list">
+    <li class="ui-list-item"><a href="#">如何申请认证？</a></li>
+    <li class="ui-list-item"><a href="#">如何提现？</a></li>
+    <li class="ui-list-item"><a href="#">支付宝数字证书有什么作用？</a></li>
+    <li class="ui-list-item"><a href="#">如何申请认证？</a></li>
+</ul>
+
+
+
+
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/modal.js"></script>
+
+</body>
+</html>

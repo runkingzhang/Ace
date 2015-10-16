@@ -1,0 +1,24 @@
+.lay-body{ width: 980px; margin: 0 auto;}
+
+/* Modal 弹出框
+ * author: zhangrunke@myhexin.com
+ */
+.modal{position:absolute;z-index:1002;background:#fff;width:auto;_overflow:hidden;}
+.modal-open{overflow:hidden;overflow-y:hidden;}
+.modal-title{height:42px;line-height:42px;padding:0 20px;font-size:16px;}
+.modal-content{padding:15px 20px;}
+.modal .close{position:absolute;top:10px;right:20px;}
+.modal-backdrop{position:absolute;top:0;left:0;height:100%;width:100%;background:#111\9;filter:alpha(opacity=30)\9;background:rgba(18,18,18,0.3);z-index:1001;}
+.modal .button{margin-right:5px;}
+.modal-load .load-img{width: 32px; height:32px;background:url(../images/loading.gif) no-repeat center center;}
+.hide{display:none;}
+.show{display:block;}
+.fade{opacity:0;-webkit-transition:opacity 0.15s linear;-moz-transition:opacity 0.15s linear;-o-transition:opacity 0.15s linear;transition:opacity 0.15s linear;}
+.in, .fade.in{opacity:1;}
+
+.modal-backdrop2 {
+position:fixed; top: 0px; right:0px; bottom:0px;background:#111\9;filter:alpha(opacity=30)\9;background:rgba(18,18,18,0.3);
+z-index: 1002; left: 0px; display:none;
+opacity:0.5; -moz-opacity:0.5;
+
+}

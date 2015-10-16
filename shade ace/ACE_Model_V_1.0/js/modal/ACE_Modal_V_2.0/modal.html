@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta charset="utf-8">
+<title>mod-modal使用html data触发</title>
+<meta name="description" content="">
+<meta name="keyword" content="">
+<link  href="css/mod-modal.css"  type="text/css"  rel="stylesheet">
+</head>
+
+<body class="lay-body">
+<!--触发modal-->
+<h3>mod-modal使用html data触发</h3>
+<a  data-toggle="modal"  data-target="#myModal" >点击触发modal</a>
+ 
+
+ <!--modal html 代码-->
+<div id="myModal" class="modal fade hide in" data-backdrop="static">
+ <h4 class="modal-title">本操作</h4>
+ <a href="###" data-dismiss="modal" class="close">×</a>
+ <div class="modal-content">
+ 	<div class="lay-warpper">
+      <input name="test" id="test" value>
+      <button id="tijiao">提交</button>
+    </div>
+    
+ </div>
+</div>
+
+
+
+<!---->
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/modal.js"></script>
+<script>
+$(function(){
+  console.log("ssssssssssssssssss");
+  $("#tijiao").click(function(){
+    
+    console.log($("#test").attr("value"));
+
+  });
+  
+})
+</script>
+</body>
+</html>

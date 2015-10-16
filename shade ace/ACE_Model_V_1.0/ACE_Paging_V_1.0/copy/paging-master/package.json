@@ -1,0 +1,21 @@
+{
+    "name": "alice-paging",
+    "version": "1.1.0",
+    "description": "分页组件。",
+    "keywords": [
+        "分页"
+    ],
+    "homepage": "",
+    "author": "",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/aliceui/paging"
+    },
+    "bugs": {
+        "url": "https://github.com/aliceui/paging/issues"
+    },
+    "license": "MIT",
+    "spm": {
+        "main": "index.css"
+    }
+}

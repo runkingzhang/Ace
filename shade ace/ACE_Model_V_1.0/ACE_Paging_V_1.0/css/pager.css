@@ -1,0 +1,17 @@
+
+
+/* mod-pagenav 分页内容
+ * author: zhangrunke@myhexin.com
+ */
+
+.mod-pagenav:after {content:"."; display:block; height:0; visibility:hidden; clear:both; }
+.mod-pagenav{margin:1em 0;zoom:1; }
+.mod-pagenav a{color:#555;}
+.mod-pagenav-cell{display:inline-block;background:#f2f1ec;padding:0 10px;height:28px;line-height:28px;margin-right: 0.3em;}
+.mod-pagenav-cell-current{background:#999;pointer-events:none;color:#fff;}
+.mod-pagenav .mod-pagenav-cell-next{background:#ec5524;border-color:#4c8928;color:#fff;}
+.mod-pagenav-cell:hover{background:#999;text-decoration:none;color:#fff;}
+.mod-pagenav-cell-ellipsis{pointer-events:none;}
+.mod-pagenav .mod-pagenav-cell-next:hover{background:#ff7744;}
+
+

@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta charset="utf-8">
+<title>Modal-demo</title>
+<meta name="description" content="">
+<meta name="keyword" content="">
+<link  href="css/puerh.css"  type="text/css"  rel="stylesheet">
+</head>
+
+<body class="lay-body modal-open">
+
+<a  id="myModal-open" >Modal Demo</a>
+ 
+<div id="myModal" class="modal fade hide in" data-backdrop="static" >
+ <h4 class="modal-title">本操作需要您先注册百姓网</h4>
+ <a href="###" class="close" id="myModal-dismiss">×</a>
+ <div class="modal-content1">
+   <a  id="myModal2-open" >Modal Demo</a>
+
+   </div>
+  
+
+ </div>
+
+  <div id="myModal2" class="modal fade hide in modal-load" data-backdrop="static" >
+  
+
+
+</div>
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/modal.js"></script>
+<script>
+$(document).ready(function(){
+  /* 使用js开启第一层modal */ 
+  $("#myModal-open").click(function(){
+  	$('#myModal').modal('show');
+  });
+  
+   /* 使用js开启第二层modal */ 
+  $("#myModal2-open").click(function(){
+    //如果是第二次打开的是内容，用下面方式
+    //$('#myModal2').modal('show')
+    //如果第二次打开的loading，使用下面的方式
+  	$('#myModal2').modal('show').append('<div  class="load-img" ></div>');
+
+    /* 使用js开启第二层modal .#myModal是接口，相对于第一层的内容 */ 
+    $("#myModal").append('<div  class="modal-backdrop2" ></div>');
+    $(".modal-backdrop2").show();
+
+  });
+
+  /* 使用js关闭modal */ 
+  $("#myModal-dismiss").click(function(){
+  	$('#myModal').modal('hide');
+  });
+
+  /* 使用js关闭modal */ 
+  $("#myModal2-dismiss").click(function(){
+  	$('#myModal2').modal('hide');
+    /* 使用js关闭.这边没有对应的接口内容 */ 
+    $(".modal-backdrop2").remove();
+  });
+
+});
+</script>
+</body>
+</html>

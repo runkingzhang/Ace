@@ -1,0 +1,23 @@
+<html>
+<head>
+<script language="javascript">
+function number(){
+var obj = document.getElementById("mySelect");
+obj.options[obj.selectedIndex] = new Option("我的吃吃","4");//在当前选中的那个的值中改变
+obj.options.add(new Option("我的吃吃","4"));再添加一个option
+alert(obj.selectedIndex);//显示序号，option自己设置的
+obj.options[obj.selectedIndex].text = "我的吃吃";更改值
+obj.remove(obj.selectedIndex);删除功能
+}
+</script>
+</head>
+<body>
+<select id="mySelect">
+<option>我的包包</option>
+<option>我的本本</option>
+<option>我的油油</option>
+<option>我的担子</option>
+</select>
+<input type="button" name="button" value="查看结果" onclick="number();">
+</body>
+</html>

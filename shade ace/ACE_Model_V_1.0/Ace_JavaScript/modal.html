@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta charset="utf-8">
+<title>mod-modal使用html data触发</title>
+<meta name="description" content="">
+<meta name="keyword" content="">
+<link  href="css/mod-modal.css"  type="text/css"  rel="stylesheet">
+</head>
+
+<body class="lay-body">
+
+<input id="amount" style="IME-MODE: disabled; WIDTH: 60px; HEIGHT: 15px" onkeyup="this.value=this.value.replace(/\D/g,'')"  onafterpaste="this.value=this.value.replace(/\D/g,'')" maxlength="5" size="14" name="amount" type="text" />
+
+
+
+
+<!---->
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/modal.js"></script>
+<script>
+$(function(){
+  console.log("ssssssssssssssssss");
+  $("#tijiao").click(function(){
+    
+    console.log($("#test").attr("value"));
+
+  });
+  
+})
+</script>
+</body>
+</html>
