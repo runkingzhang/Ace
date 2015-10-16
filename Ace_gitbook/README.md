@@ -8,8 +8,8 @@
 从模块区分上，她包含： 
 <!-- Typography -->
 - Layout
-    - typ
-    - grid哦
+    - type
+    - grid
 
 -UI 组件
 - Model
