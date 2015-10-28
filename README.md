@@ -1,8 +1,16 @@
-# shape ace
+# Ace
+ 	使用页面分层，模块原型的想法来构建前端页面的方式。
 
-用fires的方式来构建对应的基础前端组件，以便于以后可以在项目中快速的应用。
+ 	Ace_gitbook 对Ace这种方式的介绍，下载后，点击book里面点击相关的内容。 
 
-Ace gitbook 对ace的介绍
+ 	shade ace 一些简单的组件的书写
 
-shade ace 一些常见的前端组件的构建
+ 	mrda 用fires的方式来书写的一个企业站内容。 
+
+
+
+
+
+
+
 

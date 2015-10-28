@@ -9,6 +9,7 @@ layout页面中问题排版的特殊用css层叠机制来改写modal和content�
 
 layout 书写注意事项 layout 是可以规定宽度的，通过css的重叠机制可以来改造原来的modal和content模块的模块，同时可以通过媒体查询来使得页面变成响应时布局。
 
+
 常用的的layout class如下：
 ```css
 .lay-body{}
@@ -20,7 +21,12 @@ layout 书写注意事项 layout 是可以规定宽度的，通过css的重叠�
 .lay-sidecol{display:block;float:left;margin-right:20px;width:180px;min-height:1px;}
 .lay-footer{}
 ```
+
+
+
+
 ### 980手脚架
+
 栅格（Gridset）的总宽度为 980px，包含 20 栏，每栏 30px，间隙为 20px；只支持固定宽度，没有 Responsive 支持。这样使用：
 ```
 <div class="container">
@@ -36,7 +42,8 @@ layout 书写注意事项 layout 是可以规定宽度的，通过css的重叠�
   <div class="lay-sidecol last"> 侧栏 </div>
 </div>
 ```
-可以在[demo](demo/ACE_Layout_V_1.0/980grid.html)demo文件中查看 layout的使用。
+
+可以在[demo](demo/ACE_Layout_V_1.0/980grid.html)文件中查看 layout的使用。
 
 
 ---
@@ -81,10 +88,6 @@ layout 书写注意事项 layout 是可以规定宽度的，通过css的重叠�
 .lay-grid-20{width:980px;}
 .last{margin-right:0;}
 ```
-### ifind手脚架
-因为ifind客户端中页面显示的宽度是1234px，有滚动条的时候是1220px。
-所以这边设定一个1220px宽度的手脚架。
-
 
 
 

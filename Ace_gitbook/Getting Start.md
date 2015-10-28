@@ -7,8 +7,6 @@
   1. [css书写顺序](#objects)
   1. [注释规范](#note)
 
-
-
 ### <a name="html">html书写顺序</a>
 html属性顺序。 HTML 属性应当按照以下给出的顺序依次排列，确保代码的易读性。
 
@@ -92,19 +90,19 @@ css书写顺序声明顺序。 相关的属性声明应当归为一组，并按�
 在组件中，主要使用的两种注释如下：
 ```css
 /* mod-box model层的box模块                                                         --- 简单描述
- * author: runkingzhang@163.com                                                   --- 作者
- * require: button                                                                                --- 依赖（可选）
- * father:                                                                                              --- 基类（可选,当构建实体的时候需要填写）
+ * author: runkingzhang@163.com                                                     --- 作者
+ * require: button                                                                  --- 依赖（可选）
+ * father:                                                                          --- 基类（可选,当构建实体的时候需要填写）
  */
 
 .mod-box{
 font-family:serif\0/; /* solution:win7 ie8 line-height bug */      --- 行内注释
 }
 
-/* new-mod-box-favar  model层的box模块的实例                                              --- 简单描述
- * author: runkingzhang@163.com                                                                     --- 作者
- * require:                                                                                                               --- 依赖（可选）
- * father:   mod-box                                                                                              --- 基类（可选）
+/* new-mod-box-favar  model层的box模块的实例                                        --- 简单描述
+ * author: runkingzhang@163.com                                                     --- 作者
+ * require:                                                                         --- 依赖（可选）
+ * father:   mod-box                                                                --- 基类（可选）
  */
 ```
 
@@ -113,7 +111,7 @@ font-family:serif\0/; /* solution:win7 ie8 line-height bug */      --- 行内注
 <!--这边的书写写的还是不好的，自己要注意对这一块的把我。-->
 ### 页面LMC分层
 
-借鉴MVC的思想。把页面的HTML结构分为分类三层。
+把页面的HTML结构分为分类三层。
 
 - layout 层 **: 主要控制页面大区块的布局，典型模块是header
 
@@ -137,7 +135,10 @@ font-family:serif\0/; /* solution:win7 ie8 line-height bug */      --- 行内注
 .mod-box-container{ min-height:10px;}
 .mod-box-content{}
 ```
-model层每个子模块都有对应的名称，直接使用class选择区而不使用之类选择器，之类选择器在子类中使用。 每个model模块应该是一个真理，所以建议将一些方法出行（如浮动的清楚）内置在模块中间。
+model层每个子模块都有对应的名称，直接使用class选择区而不使用之类选择器，之类选择器在子类中使用。 每个model模块应该是一个整体，所以建议将一些方法出行（如浮动的清楚）内置在模块中间。
+不要出现在其他地方使用后mod，然后是对上级模块和子模块产生影响。
+
+
 - **content层 **: 组要控制页面的内容展现样式，典型是内容的左右布局和list
 
 *con-+ [名称]-+ [名称(可选)]*
@@ -146,9 +147,12 @@ model层每个子模块都有对应的名称，直接使用class选择区而不�
 .con-shop-left{ }
 .con-shop-right{}
 ```
+
 content层的每个子模块都有对应的名称，直接使用class选择器而不使用父类选择器，父类选择器在实例中使用。通过css重叠机制实现实例代码对原型代码的重写。
 
 这三层应该是相互分离的，相互嵌套的。理论上来说不应该有属性跨层次继承和相互影响。 单独模块的html+css组合应该可以应用到其他的环境中，层次之间不应该纯在相互依赖的关系。
+content中的排版和字体，应该提取到公用模块上面来，单独使用type.css来整体定义页面文字展现。
+
 
 ###	原型和实例
 
@@ -173,6 +177,8 @@ content层的每个子模块都有对应的名称，直接使用class选择器�
 .new-mod-box-promoted  .mod-box-head{ height:40px;}
 ```
 实例原型的css应该写在原型属性的下方，会对css进行重叠。这是通过css书写顺序实现的。 对模块的子模块的属性重写和设置都通过在原有子模块的前面+实例模块名称的方式来实现。 在css中实例和模型应该写在一起。
+如果只是一些单独的margin和padding这些布局，也可以直接使用.mgt{margin:15px 0 0 0;}这样的原子类。
+
 
 
 ### 栅格系统
@@ -247,11 +253,6 @@ CLEARFIX: 清理浮动，在浮动元素的父节点添加。
 ..
 </ul>
 ```
-<!--
-CLOSE: 关闭按钮
-```html
-<div class="close" data-dismiss="alert">×</div>
-```-->
 
 
 ###	兼容：CSS Hack
@@ -295,34 +296,22 @@ float: (left或 right)
 position: absolutewriting-mode: tb-rlzoom: (除 normal外任意值)
 
 ```
-    
-### IE私有特性
-
-•	expression：无论什么时候，都不要使用它，用 Javascript 吧。更优雅，更灵活。
-•	filter:
-•	应该尽量避免使用 AlphaImageLoader
-•	可以适当在投影/发光/渐变/去色方面上使用
-•	IE bug
-常见BUG，详见：http://sofish.de/1400
-
 
 
 ## JavaScript 组件
 
 Spade Ace 使用 Twitter Bootstrap 库的自定义 Javascript 插件。在这个基础上对Javascript插件做了一定的改造。
-其他的常用逐渐使用sea.js来改造和加载。
 
-提取几个常用的javascript的逐渐内容信息
+提取几个常用的javascript的逐渐内容信息。
 
-具体使用方法参见： JavaScript 组件»
+如果在项目中有特殊的需求，也可以自己书写对应的Javascript和html,css做相关的配合。
 
 
-<!--
-## 反馈
-Spade Ace 还在构件和完善中。在使用过程中遇到问题，如若有任何问题、建议、在使用和代码上的问题请找我。
-联系方式：
-- Email:zhangrunke@myhexin.com
-- feixin:1847070115-->
+
+
+
+
+
 
 
 

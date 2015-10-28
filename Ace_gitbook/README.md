@@ -1,25 +1,18 @@
 #Spade Ace
-**Spade Ace**，全名Fires.D.Ace，中文名黑桃Ace。暂时是自己的 UI 库。
-<!--旨在建立稳定、简洁、兼容、适用的前端框架。兼容 Mac/Windows 下的 IE6+ / Firefox / Google Chrome 浏览器。
-    Ace 的目标是构建一套适合同花顺的前端解决方案,达到前端页面模块化、组件化，为前端开发提供有力的工具，我希望这是一张黑桃A的底牌。
- -->
+**Spade Ace**，全名Fires.D.Ace，中文名黑桃Ace。
+用Fires 页面分层，模块原型的方式构建适合自己和适合公司的UI类库。
+方便个人和公司在以后的开发中快速构建语义化的代码，复用对应的模块。 
 
 
-从模块区分上，她包含： 
-<!-- Typography -->
-- Layout
-    - type
-    - grid
 
--UI 组件
-- Model
-- content
-- JS 组件
-<!--第一次使用 Ace？请看  Getting Start →
-    如在使用上遇到任何问题，请通过电子邮件或者飞信联系 →
+适用场景：
 
-    - Email:zhangrunke@myhexin.com
-    - feixin:1847070115-->
+1. 在页面中，插入jsp和php标签的方式渲染页面项目。
+2. 比较老得项目可以适用这种方式来逐渐替换。 
+
+提醒：
+现在没有加入响应式的布局内容，但是在layout里面，可以实现对应的响应式的布局。 
+如果是新项目，建议了解和使用React.js。
 
 
 ##Show your cards,Show your code.

@@ -1,0 +1,10 @@
+/* list
+ * author: linjianfeng@baixing.com
+ */
+.list{border:1px solid #f3f2f1;border-top:none;background:#fff;color:#333;}
+.list-item{position:relative;display:inline-block;_display:inline;width:100%;}
+.list-item a{display:block;padding:10px 15px;*zoom:1;border-top:1px solid #f3f2f1;color:#333;line-height:1.1;}
+.list-item a:hover, .list .active a{background:#ec5524;text-decoration:none;color:#fff;}
+.list-item a:hover{background:#ff7744;}
+.list-item-badge {display:inline-block;color:#fff;position:absolute;right:15px;top:11px;line-height:16px;height:16px;background:#ec5524;border-radius:8px;padding:0 6px;font-size:12px;pointer-events:none;}
+.list-item:hover .list-item-badge, .list .active .list-item-badge{background:#fff;color:#ec5524;}
